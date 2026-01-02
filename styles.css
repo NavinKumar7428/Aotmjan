@@ -6,9 +6,9 @@ body {
 }
 
 .hero-section {
-    height: 60vh;
+    height: 77vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('images/ab1.png');
+                url('images/pr1.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -48,3 +48,41 @@ img:hover {
         padding: 20px !important;
     }
 }
+
+.nav-animated {
+    position: relative;
+    font-weight: 500;
+    margin: 0 10px;
+    color: white;
+}
+
+.nav-animated::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E4A11B; /* Blue Line */
+    transition: width 0.3s ease;
+}
+
+.nav-animated:hover::after {
+    width: 100%;
+}
+
+.nav-animated:hover {
+    color: #E4A11B !important;
+}
+
+.nav-ani{
+    color:white;
+}
+
+.nav-ani:hover
+{
+color: #E4A11B !important;
+}
+
+
+
