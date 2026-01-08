@@ -144,7 +144,7 @@ color: #E4A11B !important;
 @media (max-width: 768px) {
 
   .slider-img {
-    height: 65vh;   /* mobile height */
+    height: 50vh;   /* mobile height */
   }
 
   .carousel-caption h1 {
