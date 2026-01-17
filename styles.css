@@ -1,91 +1,88 @@
-/* Custom Professional Touches */
+/* ===============================
+   GLOBAL STYLES
+================================ */
 body {
-    font-family: 'Inter', sans-serif;
-    color: #333;
-    line-height: 1.8;
-}
-
-.hero-section {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('images/pr1.png');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/* Principle Rows Animation */
-.row {
-    transition: all 0.4s ease-in-out;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.8;
 }
 
 h2 {
-    color: #222;
-    margin-bottom: 1.5rem;
+  color: #222;
+  margin-bottom: 1.5rem;
 }
 
-.badge {
-    padding: 0.5em 1em;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-/* Responsive Image Hover */
-img {
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.02);
-}
-
-/* Spacing for mobile */
-@media (max-width: 768px) {
-    .row {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    .ps-md-5, .pe-md-5 {
-        padding: 20px !important;
-    }
-}
-
+/* ===============================
+   NAVBAR STYLES
+================================ */
 .nav-animated {
-    position: relative;
-    font-weight: 500;
-    margin: 0 10px;
-    color: white;
+  position: relative;
+  font-weight: 500;
+  margin: 0 10px;
+  color: white;
 }
 
 .nav-animated::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #E4A11B; /* Blue Line */
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #E4A11B;
+  transition: width 0.3s ease;
 }
 
 .nav-animated:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-.nav-animated:hover {
-    color: #E4A11B !important;
+.nav-animated:hover,
+.nav-ani:hover {
+  color: #E4A11B !important;
 }
 
-.nav-ani{
-    color:white;
+.nav-ani {
+  color: white;
 }
 
-.nav-ani:hover
-{
-color: #E4A11B !important;
+/* ===============================
+   HERO / SLIDER
+================================ */
+.slider-img {
+  height: 83vh;
+  width: 100%;
+  object-fit: cover;
 }
 
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+}
 
+.carousel-caption h1,
+.carousel-caption p {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ===============================
+   PRINCIPLES SECTION
+================================ */
+.badge {
+  padding: 0.5em 1em;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* custom row animation (NOT bootstrap row) */
+.principle-row {
+  transition: all 0.4s ease-in-out;
+}
+
+/* ===============================
+   ANIMATION CARD
+================================ */
 .animation-card {
   border-radius: 15px;
   background-color: #ffffff;
@@ -107,52 +104,73 @@ color: #E4A11B !important;
   padding-left: 20px;
 }
 
-.animation-card h5 {
-  font-weight: 600;
-  color: #222;
+/* ===============================
+   IMAGE HOVER
+================================ */
+img {
+  transition: transform 0.3s ease;
 }
 
-.animation-card p,
-.animation-card li {
-  font-size: 16px;
-  color: #555;
+img:hover {
+  transform: scale(1.02);
 }
 
-.animation-card ul {
-  padding-left: 20px;
+/* ===============================
+   TOPIC CARDS
+================================ */
+.card {
+  transition: 0.4s ease;
 }
 
-.slider-img {
-  height: 83vh;
-  object-fit: cover;
-  background-attachment: fixed;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-caption {
-  top: 0;
-  bottom: 0;
-  padding: 1rem;
+.card a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Improve text visibility */
-.carousel-caption h1,
-.carousel-caption p {
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+.card h5 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #000;
 }
 
+.card p {
+  text-align: center;
+  padding: 0 15px 15px;
+  color: #404040;
+}
 
+/* ===============================
+   MOBILE RESPONSIVE FIXES
+================================ */
 @media (max-width: 768px) {
 
-  .slider-img {
-    height: 50vh;   /* mobile height */
+  .slider-img 
+  {
+    height: 55vh;
   }
 
   .carousel-caption h1 {
-    font-size: 2rem;   /* reduce heading size */
+    font-size: 2rem;
   }
 
   .carousel-caption p {
-    font-size: 1rem;   /* reduce paragraph size */
+    font-size: 1rem;
   }
-}
 
+  .carousel-caption .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .ps-md-5,
+  .pe-md-5 {
+    padding: 20px !important;
+  }
+
+}
